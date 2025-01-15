@@ -13,6 +13,11 @@ function updateClock() {
         h = h - 12
         ampm = "PM"
     }
+
+    hourEl.innerText = h;
+    minEl.innerText = m;
+    secEl.innerText = s;
+    ampmEl.innerText = ampm;
 }
 
 

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
   border: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -62,8 +63,8 @@ body {
   font-size: larger;
 }
 .loginpad a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .loginpad2 {
   display: flex;

@@ -5,12 +5,12 @@ let user = {
 }
 let email;
 let password;
-let page;
+// let page;
 
 document.getElementById("log").onclick = function () {
     email = document.getElementById("email").value;
     password = document.getElementById("password").value;
-    page = document.getElementById("main").textContent
+    // page = document.getElementById("main").textContent
     document.getElementById("usertag").textContent = `Hello, ${user.userName}`
     document.getElementById("well").textContent = `We are happy to have you on our platform...`
     document.getElementById("reg").textContent = `Welcome`

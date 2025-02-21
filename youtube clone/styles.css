@@ -2,12 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  z-index: 1;
+  background-color: white;
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 .headleft {
   display: flex;
@@ -18,29 +26,35 @@ header {
   height: inherit;
   margin-left: 20px;
 }
+.headcenter {
+  /* flex-grow: 1; */
+  width: 700px;
+}
 .search {
   display: flex;
   align-items: center;
 }
 #search {
   height: 30px;
-  padding: 5px 50px;
+  padding: 5px 10px;
   flex: 1;
   border: 1px solid gray;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   opacity: 0.5;
-
-  /* border-right: none; */
+  box-shadow: inset 1px 2px 4px rgb(0, 0, 0, 0.2);
+  font-size: 17px;
+  width: 0;
 }
-.search img {
+.search .img1 {
   border: 1px solid gray;
+  background-color: rgb(211, 208, 208);
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   opacity: 0.5;
-  border-left: none;
+  margin-left: -1px;
   height: 28px;
-  padding: 0 12px;
+  width: 66px;
 }
 .search .mic {
   height: 25px;
@@ -54,44 +68,99 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-shrink: 0;
+  width: 180px;
+}
+.headright .div-notif {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.headright .div-notif img {
+  height: 25px;
+}
+.headright .notification {
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px;
+  bottom: 14px;
+  left: 13px;
 }
 .headright .profile {
   height: 24px;
   border-radius: 50%;
 }
-main {
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 72px;
+  margin-top: 51px;
+  padding-top: 15px;
   display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(226, 223, 223);
-  border: 1px solid red;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.video1, .video2, .video3 {
-    border: 1px solid red;
-    height: 250px;
-    width: 250px;
-    
+nav img {
+  height: 30px;
+}
+nav img:hover {
+  cursor: pointer;
+  background-color: rgb(196, 191, 191);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+main {
+  background-color: rgb(226, 223, 223);
+  margin-top: 70px;
+  position: static;
+  margin-left: 79px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+.video1 {
+  position: relative;
+}
+.video-pic {
+  position: relative;
 }
 .video-pic img {
-    height: 150px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.video-pic p {
+  background-color: black;
+  color: white;
+  position: absolute;
+  padding: 2px 4px;
+  bottom: 13px;
+  right: 5px;
 }
 .video-prof {
-    display: flex;
-    vertical-align: top;
+  display: flex;
+  vertical-align: top;
+  gap: 6px;
 }
 .profile-pic img {
-    height: 30px;
-    border-radius: 15px;
+  height: 30px;
+  border-radius: 15px;
+  padding-top: 5px;
 }
-.video2 img {
-    height: 90px;
+.description .title {
+  font-weight: 600;
+  margin-bottom: 7px;
 }
-.video3 img {
-    height: 100px;
-}
-nav {
-  display: flex;
-  align-items: self-start;
-  flex-direction: column;
-  background-color: gray;
-  height: 100vh;
+.description .username,
+.duration {
+  opacity: 0.4;
 }

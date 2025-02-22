@@ -12,7 +12,10 @@
     <!-- this is section is for my header part of the website.-->
     <header>
         <div class="headleft"><!-- left side of the header section-->
-            <img src="./bx-menu.svg">
+            <div class="menu-btn">
+                <img class="menubtn" src="./bx-menu.svg">
+                <div class="hovtxt2">Menu</div>
+            </div>
             <div class="headleft1">
                 <img class="imgvid" src="./youtube-tv-svgrepo-com.svg">
                 <h1>YouTube</h1>
@@ -21,38 +24,60 @@
         <div class="headcenter">
             <div class="search">
                 <input type="search" id="search" placeholder="Search">
-                <img class="img1" src="./bx-search.svg">
-                <img class="mic" src="./user-svgrepo-com.svg">
+                <button class="search-btn">
+                    <img class="img1" src="./bx-search.svg">
+                    <div class="hovtxt1">Search</div>
+                </button>
+                <button class="search-btn">
+                    <img class="mic" src="./user-svgrepo-com.svg">
+                    <div class="hovtxt1">Search with Voice</div>
+                </button>
             </div>
         </div>
         <div class="headright">
-            <img src="./bxs-video-plus.svg" />
-            <img src="./bxs-grid.svg" />
-            <div class="div-notif">
-                <img src="./bell-svgrepo-com.svg" />
-                <p class="notification">3+</p>
+            <div class="search-btn">
+                <img src="./bxs-video-plus.svg" />
+                <div class="hovtxt1">Upload</div>
             </div>
-            <img class="profile" src="./Rectangle 61 (2).png" />
+            <div class="search-btn">
+                <img src="./bxs-grid.svg" />
+                <div class="hovtxt1">YouTube Apps</div>
+            </div>
+            <div id="div-notif" class="search-btn">
+                <img class="notifi-bell" src="./bell-svgrepo-com.svg" />
+                <p class="notification">3+</p>
+                <div class="hovtxt1">Notification</div>
+            </div>
+            <div class="search-btn">
+                <img class="profile" src="./Rectangle 61 (2).png" />
+                <div class="hovtxt1">Profile</div>
+            </div>
         </div>
     </header>
     <nav>
-        <div>
+        <div class="navlink">
             <img src="./home-svgrepo-com.svg">
+            <div>Home</div>
         </div>
-        <div>
+        <div class="navlink">
             <img src="./compass-svgrepo-com.svg">
+            <div>Explore</div>
         </div>
-        <div>
+        <div class="navlink">
             <img src="./youtube-tv-svgrepo-com.svg">
+            <div>Subscription</div>
         </div>
-        <div>
+        <div class="navlink">
             <img src="./youtube-tv-svgrepo-com.svg">
+            <div>Originals</div>
         </div>
-        <div>
+        <div class="navlink">
             <img src="./user-svgrepo-com.svg">
+            <div>Youtube Music</div>
         </div>
-        <div>
+        <div class="navlink">
             <img src="./bxs-grid.svg">
+            <div>Library</div>
         </div>
     </nav>
     <main>

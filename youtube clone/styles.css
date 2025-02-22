@@ -21,29 +21,52 @@ header {
   display: flex;
   height: 40px;
 }
+.headleft .menubtn {
+    height: 40px;
+    position: relative;
+}
+.headleft .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hovtxt2 {
+    position: absolute;
+    bottom: -1px;
+    color: white;
+    font-size: 14px;
+    background-color: rgb(212, 207, 207);
+    padding: 0 2px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+}
+.headleft .menu-btn:hover .hovtxt2 {
+    opacity: 1;
+}
 .headleft1 {
   display: flex;
   height: inherit;
   margin-left: 20px;
 }
 .headcenter {
-  /* flex-grow: 1; */
   width: 700px;
 }
 .search {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #search {
-  height: 30px;
-  padding: 5px 10px;
+  height: 33px;
+  padding: 6px 10px;
   flex: 1;
   border: 1px solid gray;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   opacity: 0.5;
   box-shadow: inset 1px 2px 4px rgb(0, 0, 0, 0.2);
-  font-size: 17px;
+  font-size: 18px;
   width: 0;
 }
 .search .img1 {
@@ -53,8 +76,30 @@ header {
   border-bottom-right-radius: 3px;
   opacity: 0.5;
   margin-left: -1px;
-  height: 28px;
+  height: 31px;
   width: 66px;
+}
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: relative;
+}
+.search-btn .hovtxt1 {
+  position: absolute;
+  background-color: rgb(212, 207, 207);
+  bottom: -20px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+.search-btn:hover .hovtxt1 {
+  opacity: 1;
 }
 .search .mic {
   height: 25px;
@@ -64,6 +109,10 @@ header {
   background-color: gray;
   opacity: 0.2;
 }
+.search button {
+  border: none;
+  background-color: transparent;
+}
 .headright {
   display: flex;
   align-items: center;
@@ -71,20 +120,22 @@ header {
   flex-shrink: 0;
   width: 180px;
 }
-.headright .div-notif {
-  position: relative;
+.headright #div-notif {
+  /* position: relative; */
   display: flex;
   align-items: center;
 }
-.headright .div-notif img {
-  height: 25px;
+.headright #div-notif .notifi-bell {
+  height: 30px;
+}
+.notifi-bell {
+    position: relative;
 }
 .headright .notification {
   position: absolute;
   background-color: red;
-  width: 20px;
-  height: 20px;
-  font-size: 16px;
+  padding-left: 2px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   border-radius: 10px;
@@ -100,27 +151,38 @@ nav {
   left: 0;
   bottom: 0;
   top: 0;
-  width: 72px;
-  margin-top: 51px;
-  padding-top: 15px;
+  width: 82px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+}
+.navlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+}
+.navlink:hover {
+  cursor: pointer;
+  background-color: rgb(235, 229, 229);
 }
 nav img {
   height: 30px;
 }
-nav img:hover {
-  cursor: pointer;
-  background-color: rgb(196, 191, 191);
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 main {
-  background-color: rgb(226, 223, 223);
-  margin-top: 70px;
-  position: static;
-  margin-left: 79px;
+  background-color: rgb(255, 254, 254);
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 20px;
 }
 .container {
   display: grid;
